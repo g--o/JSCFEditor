@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editor demo</title>
+	<style type="text/css" media="screen">
+		#editor { 
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+    <div id="editor">alert("hello JSCF!");</div>
+    <!-- load ace -->
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="./src-noconflict/ace.js"></script>
+	<script src="./src-noconflict/mode-javascript.js"></script>
+    <script src="./jscf-editor.js"></script>
+	<script type="text/javascript">
+		var editor = createEditor("editor", false);
+	</script>
+</body>
+</html>
