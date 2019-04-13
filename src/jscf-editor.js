@@ -9,7 +9,6 @@ function createEditor(editor_id, useWebWorker)
 {
 	//create editor
 	var editor = ace.edit("editor");
-	editor.getSession().setUseWorker(useWebWorker);
 	editor.getSession().setMode("ace/mode/javascript");
 
 	// editor styling
@@ -49,12 +48,11 @@ function createEditor(editor_id, useWebWorker)
 			// beautify when closing bracket typed in javascript or css mode
 			autoBeautify: true,
 			// this enables the plugin to work with hotkeys (ctrl+b to beautify)
-			// htmlBeautify: true,
+			htmlBeautify: true,
 		});
 		
 		//modify beautify options as needed:
 		window.beautifyOptions = beautify.options;
-		console.log('beautifyOptions:', beautifyOptions);
 	});
 	
 	return editor;

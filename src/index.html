@@ -15,13 +15,42 @@
 	</style>
 </head>
 <body>
-    <div id="editor">alert("hello JSCF!");</div>
+    <div id="editor">
+	/**
+		Welcome to JSCFEditor!
+		
+		The editor is based on Tern.Ace and is offering a comfy javascript
+		coding experience locally on the browser.
+
+		Main features for JS:
+		=====================
+		- autocomplete
+		- lint
+		- highlighting
+		- snippets
+		- emca5 docs
+		- beautifier
+		and more!
+		
+		Hotkeys:
+		========
+		- Ctrl+Space:	trigger autocomplete
+		- Ctrl+b:		beautify
+		- Tab:			autocomplete
+		- Ctrl+I:		type inferer
+		- Alt+.:		jump to definition
+		- Alt+,:		jump back
+		- Ctrl+E:		find references
+		- Ctrl+Shift+E:	rename
+	**/
+	</div>
     <!-- load ace -->
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="./src-noconflict/ace.js"></script>
 	<script src="./src-noconflict/mode-javascript.js"></script>
     <script src="./jscf-editor.js"></script>
 	<script type="text/javascript">
+		// the tern worker is outdated and broken for local html
 		var editor = createEditor("editor", false);
 	</script>
 </body>
