@@ -1319,7 +1319,7 @@ exports.getCompletionPrefix = function (editor) {
     var pos = editor.getCursorPosition();
     var line = editor.session.getLine(pos.row);
     var prefix;
-	console.log(editor.completers);
+
     editor.completers.forEach(function(completer) {
         if (completer.identifierRegexps) {
             completer.identifierRegexps.forEach(function(identifierRegex) {
@@ -3990,7 +3990,7 @@ ace.define("ace/tern/tern",["require","exports","module","ace/config","ace/lib/l
         }
     };
 
-	if (ternOptions.useWorker) {
+	if (aceTs) {
 		completers.push(aceTs);
 		exports.server = aceTs;
 	}
