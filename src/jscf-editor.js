@@ -8,7 +8,7 @@
 function createEditor(editor_id, useWebWorker)
 {
 	//create editor
-	var editor = ace.edit("editor");
+	var editor = ace.edit(editor_id);
 	editor.getSession().setMode("ace/mode/javascript");
 
 	// editor styling
